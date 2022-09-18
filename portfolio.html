@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"
-        href="./CSS/bootstrap.min.css">
+    <title>Leening portfolio</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link
@@ -16,22 +15,211 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <script src="./JS/jquery.min.js"></script>
     <script src="./JS/bootstrap.min.js"></script>
+    <style>
+        .portfolio-wrapper h1,
+        .portfolio-wrapper h2 {
+            margin: 0;
+        }
 
+        .portfolio-wrapper h1 {
+            font-size: 4em;
+            margin-bottom: 8px;
+        }
+
+        .persnal-details p {
+            font-size: 1.5em;
+            font-weight: 100;
+            margin-bottom: 1.5em;
+            color: #ccc;
+        }
+
+        .profile-details-wrap {
+            margin-bottom: 6em;
+        }
+
+        .portfolio-wrapper {
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            background: #2B2C2C;
+            padding-bottom: 6em;
+            padding-top: 6em;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .profile-img {
+            display: block;
+            width: 35%;
+            margin-left: auto;
+            position: relative;
+        }
+
+        .profile-img img {
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            border: 10px solid #707070;
+        }
+
+        .img-wrap {
+            position: relative;
+            z-index: 10;
+            background: #303131;
+        }
+
+        /* .img-wrap:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: red;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            background: transparent;
+            border: 10px solid #ccc;
+            top: 20px;
+            left: -20px;
+        } */
+
+        .profile-img:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: red;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            background: transparent;
+            border: 10px solid #FEB633;
+            top: 30px;
+            left: -30px;
+        }
+
+        .persnal-details button {
+            padding: 0;
+            border: none;
+            position: relative;
+            margin-left: 8px;
+            transition: 0.3s all ease;
+        }
+
+        .persnal-details button:before {
+            width: 100%;
+            height: 100%;
+            border: 3px solid #f7b643;
+            content: '';
+            position: absolute;
+            left: -8px;
+            bottom: -8px;
+            z-index: 0;
+            transition: 0.3s all ease;
+        }
+
+        .persnal-details button:hover:before {
+            left: 0;
+            bottom: 0;
+        }
+
+        .common-btn {
+            padding: 10px 30px;
+            display: block;
+            background: #2b2c2c;
+            border: #707070 3px solid;
+            color: #f7b643;
+            z-index: 10;
+            position: relative;
+            transition: 0.4s all ease;
+        }
+
+        .common-btn:hover {
+            border: 3px solid #f7b643;
+        }
+
+        .about-me-wrap {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .about-profile-section {
+            background: #303131;
+            padding: 6em;
+        }
+
+        .about-me-header {
+            position: relative;
+        }
+
+        .about-me-header h3 {
+            position: absolute;
+            left: 30%;
+            top: 25%;
+            font-size: 3em;
+        }
+
+        .about-me {
+            margin-left: 6em;
+        }
+
+        .about-me p {
+            line-height: 1.5;
+            font-weight: 300;
+            font-size: 1.25em;
+            color: #ccc;
+        }
+
+        .about-me-header h3:before {
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: #f7b643;
+            content: '';
+            bottom: -30px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="portfolio-wrapper container">
-        <div class="profile-section">
-            <div class="persnal-details">
-                <h1>I'm Leening</h1>
-                <p>Graphic designer and photographer</p>
-                <button type="button">About me</button>
+    <div class="portfolio-wrapper">
+        <div class="profile-details-wrap">
+            <div class="container">
+                <div class="profile-section">
+                    <div class="persnal-details">
+                        <h1>I'm Leening</h1>
+                        <p>Graphic designer and photographer</p>
+                        <button type="button"><span class="common-btn">About me</span></button>
+                    </div>
+                    <div class="profile-img">
+                        <div class="img-wrap">
+                            <img src="./Images/Leening.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="profile-img">
-                <img src="./Images/" alt="">
+        </div>
+        <div class="about-profile-section">
+            <div class="container">
+                <div class="about-me-wrap">
+                    <div class="about-me-header">
+                        <img src="./Images/bg-pattern-2.png" alt="">
+                        <h3>About me</h3>
+                    </div>
+                    <div class="about-me">
+                        <p>Graphic designers develop visual concepts by hand or with computer software. Intended to
+                            captivate, inform, inspire, and/or persuade, a designer's end product is often used in a
+                            marketing or promotional campaign, or a public announcement. Graphic designers work
+                            creatively, both in print and electronically.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
