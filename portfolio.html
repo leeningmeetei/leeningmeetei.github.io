@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leening portfolio</title>
+    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/bootstrap.min.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/style.css">
     <script src="./JS/jquery.min.js"></script>
     <script src="./JS/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <style>
         .portfolio-wrapper h1,
         .portfolio-wrapper h2 {
@@ -167,18 +167,94 @@
 
         .about-me p {
             line-height: 1.5;
-            font-weight: 300;
-            font-size: 1.25em;
+            font-weight: 100;
+            font-size: 1.5em;
             color: #ccc;
+            margin-bottom: 0;
         }
 
-        .about-me-header h3:before {
+        .about-me-header h3:before,
+        .work-sec-header h3::before {
             position: absolute;
-            width: 50%;
+            width: 0;
             height: 3px;
             background: #f7b643;
             content: '';
             bottom: -30px;
+            transition: 0.3s all ease;
+        }
+
+        .about-me-header h3.expand:before,
+        .work-sec-header h3.expand::before {
+            width: 50%;
+        }
+
+        .work-sec-header img {
+            width: 30%;
+            margin: auto;
+            display: block;
+        }
+
+        .work-sec-header {
+            position: relative;
+            padding: 4em;
+        }
+
+        .work-sec-header h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+        }
+
+        .diff-works-sec .nav-tabs>li>a {
+            padding: 10px;
+            padding-left: 0;
+            color: #707070;
+            font-size: 1.25em;
+            font-weight: 300;
+            position: relative;
+        }
+
+        .diff-works-sec .nav-tabs>li {
+            width: 22%;
+        }
+
+        .diff-works-sec .nav-tabs>li.active>a {
+            background: transparent;
+            border: transparent 1px solid;
+            color: #fff;
+            position: relative;
+        }
+
+        .diff-works-sec .nav-tabs {
+            border-bottom: none;
+        }
+
+        .diff-works-sec .nav-tabs>li>a:hover {
+            background: transparent;
+            border: transparent 1px solid;
+            color: #fff;
+        }
+
+        .diff-works-sec .tab-content {
+            padding-top: 3em;
+            min-height: 15em;
+        }
+
+        .diff-works-sec .nav-tabs>li>a:before {
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: #f7b643;
+            content: '';
+            bottom: -5px;
+            transition: 0.3s all ease;
+        }
+
+        .diff-works-sec .nav-tabs>li.active>a:before {
+            width: 30%;
         }
     </style>
 </head>
@@ -191,7 +267,7 @@
                     <div class="persnal-details">
                         <h1>I'm Leening</h1>
                         <p>Graphic designer and photographer</p>
-                        <button type="button"><span class="common-btn">About me</span></button>
+                        <button type="button" class="about-me-btn"><span class="common-btn">About me</span></button>
                     </div>
                     <div class="profile-img">
                         <div class="img-wrap">
@@ -218,8 +294,103 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="work-section">
+            <div class="container">
+                <div class="work-sec-header">
+                    <img src="./Images/bg-pattern-1.png" alt="">
+                    <h3>I work on</h3>
+                </div>
+                <div class="diff-works-sec">
+                    <!-- Nav tabs -->
+                    <ul id="tabs" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#Photography" role="tab"
+                                data-toggle="tab">Photography</a></li>
+                        <li role="presentation"><a href="#graphicdesign" role="tab" data-toggle="tab">Graphic design</a>
+                        </li>
+                        <li role="presentation"><a href="#videocreation" role="tab" data-toggle="tab">Video creation</a>
+                        </li>
+                        <li role="presentation"><a href="#webdesign" role="tab" data-toggle="tab">Web design</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="Photography">
+                            <div class="imglist">
+                                <a href="https://source.unsplash.com/Lzx4J_Pb3sk/1500x1000" data-fancybox="group"
+                                    data-caption="This image has a caption 1">
+                                    <img src="https://source.unsplash.com/Lzx4J_Pb3sk/240x160" />
+                                </a>
 
+                                <a href="https://source.unsplash.com/cZVthlrnlnQ/1500x1000" data-fancybox="group"
+                                    data-caption="This image has a caption 2">
+                                    <img src="https://source.unsplash.com/cZVthlrnlnQ/240x160" />
+                                </a>
+
+                                <a href="https://source.unsplash.com/vddccTqwal8/1500x1000" data-fancybox="group"
+                                    data-caption="This image has a caption 3">
+                                    <img src="https://source.unsplash.com/vddccTqwal8/240x160" />
+                                </a>
+
+                                <a href="https://source.unsplash.com/Sj5efgWguDs/1500x1000" data-fancybox="group"
+                                    data-caption="This image has a caption 4">
+                                    <img src="https://source.unsplash.com/Sj5efgWguDs/240x160" />
+                                </a>
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="graphicdesign">Graphic design</div>
+                        <div role="tabpanel" class="tab-pane fade" id="videocreation">Video creation</div>
+                        <div role="tabpanel" class="tab-pane fade" id="webdesign">Web design</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $(".about-me-btn").click(function () {
+                $('html,body').animate({
+                    scrollTop: $(".about-profile-section").offset().top
+                }, 500);
+                setTimeout(function () {
+                    $('.work-sec-header h3, .about-me-header h3').addClass('expand')
+                }, 500)
+            });
+
+            $(function () {
+                var header = $('.work-sec-header h3');
+                var menu = $('.about-me-header h3');
+                $(window).scroll(function () {
+                    var scroll = $(window).scrollTop();
+
+                    if (scroll >= $('.about-profile-section').offset().top) { // check the offset top
+                        header.addClass('expand');
+                        menu.addClass('expand');
+                    } else if (scroll >= $('.content').offset().top + $('.content').height()) { // check the scrollHeight
+                        header.removeClass('expand');
+                        menu.removeClass('expand');
+                    }
+                });
+            });
+
+            // fancybox script  
+            $('[data-fancybox]').fancybox({
+                // Options will go here
+                buttons: [
+                    'close'
+                ],
+                wheel: false,
+                transitionEffect: "slide",
+                // thumbs          : false,
+                // hash            : false,
+                loop: true,
+                // keyboard        : true,
+                toolbar: false,
+                // animationEffect : false,
+                // arrows          : true,
+                clickContent: false
+            });
+        })
+    </script>
 </body>
 
 </html>
