@@ -56,6 +56,7 @@
             width: 35%;
             margin-left: auto;
             position: relative;
+            transition: 0.3 all ease;
         }
 
         .profile-img img {
@@ -69,6 +70,14 @@
             position: relative;
             z-index: 10;
             background: #303131;
+            top: 0;
+            right: 0;
+            transition: 1s all ease;
+        }
+
+        .img-wrap.pic-animation {
+            top: -15px;
+            right: -15px;
         }
 
         /* .img-wrap:after {
@@ -95,9 +104,16 @@
             top: 0;
             background: transparent;
             border: 10px solid #FEB633;
-            top: 30px;
-            left: -30px;
+            top: 0;
+            left: 0;
+            transition: 1s all ease;
         }
+
+        .profile-img.fram-animation:before {
+            top: 15px;
+            left: -15px;
+        }
+
 
         .persnal-details button {
             padding: 0;
@@ -347,6 +363,11 @@
     <script>
 
         $(document).ready(function () {
+            setTimeout(function () {
+                $('.profile-img').addClass('fram-animation')
+                $('.img-wrap').addClass('pic-animation')
+            }, 500)
+
             $(".about-me-btn").click(function () {
                 $('html,body').animate({
                     scrollTop: $(".about-profile-section").offset().top
