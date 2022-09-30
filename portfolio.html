@@ -24,25 +24,26 @@
         .portfolio-wrapper h1 {
             font-size: 4em;
             margin-bottom: 8px;
+            font-weight: 900;
         }
 
         .persnal-details p {
             font-size: 1.5em;
             font-weight: 100;
             margin-bottom: 1.5em;
-            color: #ccc;
+            /* color: #ccc; */
         }
 
-        .profile-details-wrap {
+        /* .profile-details-wrap {
             margin-bottom: 6em;
-        }
+        } */
 
         .portfolio-wrapper {
             font-family: 'Roboto', sans-serif;
-            color: #fff;
-            background: #2B2C2C;
+            color: #003552;
+            background: #EFF4FE;
             padding-bottom: 6em;
-            padding-top: 6em;
+            padding-top: 2.5em;
         }
 
         .profile-section {
@@ -53,25 +54,30 @@
 
         .profile-img {
             display: block;
-            width: 35%;
+            width: 50%;
             margin-left: auto;
             position: relative;
-            transition: 0.3 all ease;
+            transition: 0.3s all ease;
+            background: url(./Images/bg-pattern-0.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 0 10%;
         }
 
         .profile-img img {
-            width: 100%;
-            display: block;
+            width: 70%;
+            /* display: block;
             margin-left: auto;
-            border: 10px solid #707070;
+            border: 10px solid #707070; */
         }
 
         .img-wrap {
             position: relative;
             z-index: 10;
-            background: #303131;
+            /* background: #303131; */
             top: 0;
             right: 0;
+            text-align: center;
             transition: 1s all ease;
         }
 
@@ -94,7 +100,7 @@
             left: -20px;
         } */
 
-        .profile-img:before {
+        /* .profile-img:before {
             content: '';
             width: 100%;
             height: 100%;
@@ -107,12 +113,12 @@
             top: 0;
             left: 0;
             transition: 1s all ease;
-        }
+        } */
 
-        .profile-img.fram-animation:before {
+        /* .profile-img.fram-animation:before {
             top: 15px;
             left: -15px;
-        }
+        } */
 
 
         .persnal-details button {
@@ -123,7 +129,7 @@
             transition: 0.3s all ease;
         }
 
-        .persnal-details button:before {
+        /* .persnal-details button:before {
             width: 100%;
             height: 100%;
             border: 3px solid #f7b643;
@@ -133,7 +139,7 @@
             bottom: -8px;
             z-index: 0;
             transition: 0.3s all ease;
-        }
+        } */
 
         .persnal-details button:hover:before {
             left: 0;
@@ -143,16 +149,17 @@
         .common-btn {
             padding: 10px 30px;
             display: block;
-            background: #2b2c2c;
-            border: #707070 3px solid;
-            color: #f7b643;
+            background: #724AF6;
+            /* border: #707070 3px solid; */
+            color: #fff;
             z-index: 10;
             position: relative;
+            border-radius: 12px;
             transition: 0.4s all ease;
         }
 
         .common-btn:hover {
-            border: 3px solid #f7b643;
+            /* border: 3px solid #f7b643; */
         }
 
         .about-me-wrap {
@@ -162,7 +169,7 @@
         }
 
         .about-profile-section {
-            background: #303131;
+            background: #fff;
             padding: 6em;
         }
 
@@ -174,7 +181,8 @@
             position: absolute;
             left: 30%;
             top: 25%;
-            font-size: 3em;
+            font-size: 2.5em;
+            font-weight: 800;
         }
 
         .about-me {
@@ -183,10 +191,11 @@
 
         .about-me p {
             line-height: 1.5;
-            font-weight: 100;
-            font-size: 1.5em;
-            color: #ccc;
-            margin-bottom: 0;
+            font-size: 1.1em;
+            /* color: #ccc; */
+            margin-bottom: 1em;
+            font-weight: 400;
+            letter-spacing: 0.1px;
         }
 
         .about-me-header h3:before,
@@ -194,7 +203,7 @@
             position: absolute;
             width: 0;
             height: 3px;
-            background: #f7b643;
+            background: #724AF6;
             content: '';
             bottom: -30px;
             transition: 0.3s all ease;
@@ -221,7 +230,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 3em;
+            font-size: 2.5em;
+            font-weight: 800;
         }
 
         .diff-works-sec .nav-tabs>li>a {
@@ -229,7 +239,7 @@
             padding-left: 0;
             color: #707070;
             font-size: 1.25em;
-            font-weight: 300;
+            font-weight: 400;
             position: relative;
         }
 
@@ -240,7 +250,7 @@
         .diff-works-sec .nav-tabs>li.active>a {
             background: transparent;
             border: transparent 1px solid;
-            color: #fff;
+            color: #003552;
             position: relative;
         }
 
@@ -251,7 +261,7 @@
         .diff-works-sec .nav-tabs>li>a:hover {
             background: transparent;
             border: transparent 1px solid;
-            color: #fff;
+            color: #003552;
         }
 
         .diff-works-sec .tab-content {
@@ -263,7 +273,7 @@
             position: absolute;
             width: 0;
             height: 3px;
-            background: #f7b643;
+            background: #724AF6;
             content: '';
             bottom: -5px;
             transition: 0.3s all ease;
@@ -272,11 +282,161 @@
         .diff-works-sec .nav-tabs>li.active>a:before {
             width: 30%;
         }
+
+        ul.page-nav li:first-child img {
+            width: 60px;
+        }
+
+        ul.page-nav {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 3em;
+        }
+
+        ul.page-nav li {
+            display: inline-block;
+        }
+
+        ul.page-nav li:not(:first-child) {
+            float: right;
+        }
+
+        ul.page-nav li:not(:first-child) a {
+            display: inline-block;
+            margin-left: 40px;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #75A2BB;
+            text-decoration: none;
+            padding-top: 20px;
+        }
+
+        .experiece-tools-section h3 {
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+
+        .experiece-tools-section {
+            padding: 6em;
+        }
+
+        ul.experience-timeline {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul.experience-timeline li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 22px;
+        }
+
+        ul.experience-timeline li::before {
+            content: '';
+            position: absolute;
+            height: 80%;
+            width: 2px;
+            background: #724af6;
+            left: 9px;
+            top: 12px;
+        }
+
+        ul.experience-timeline li h4::before {
+            content: '';
+            position: absolute;
+            left: -43px;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background: #ffffff;
+            border-radius: 50%;
+            border: #724af6 2px solid;
+        }
+
+        ul.experience-timeline h4 {
+            position: relative;
+            padding-top: 5px;
+            margin-bottom: 4px;
+        }
+
+
+        ul.experience-timeline li h4::after {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            background: #724af6;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+
+        ul.experience-timeline a {
+            font-size: 12px;
+            display: block;
+            margin-top: 15px;
+            position: relative;
+            ;
+        }
+
+        ul.experience-timeline a:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 20px;
+            background: #724af6;
+            left: 0;
+            bottom: -5px;
+        }
+
+        ul.experience-timeline span {
+            display: inline-block;
+            font-weight: 300;
+        }
+        ul.skills li span {
+    position: absolute;
+    display: block;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+ul.skills li {
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+}
+ul.skills {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 30px;
+}
+ul.skills li img {
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+ul.skills p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
     </style>
 </head>
 
 <body>
     <div class="portfolio-wrapper">
+        <div class="container">
+            <ul class="page-nav">
+                <li><a href="" class="inner-navigation"></a><img src="./Images/identifier@2x.png" alt=""></li>
+                <li><a href="" class="inner-navigation">Contact</a></li>
+                <li><a href="" class="inner-navigation">Work</a></li>
+                <li><a href="" class="inner-navigation">Skill</a></li>
+                <li><a href="" class="inner-navigation">Experience</a></li>
+                <li><a href="" class="inner-navigation">About me</a></li>
+            </ul>
+        </div>
         <div class="profile-details-wrap">
             <div class="container">
                 <div class="profile-section">
@@ -287,7 +447,7 @@
                     </div>
                     <div class="profile-img">
                         <div class="img-wrap">
-                            <img src="./Images/Leening.png" alt="">
+                            <img src="./Images/profile-img-2@2x.png" alt="">
 
                         </div>
                     </div>
@@ -302,10 +462,102 @@
                         <h3>About me</h3>
                     </div>
                     <div class="about-me">
-                        <p>Graphic designers develop visual concepts by hand or with computer software. Intended to
-                            captivate, inform, inspire, and/or persuade, a designer's end product is often used in a
-                            marketing or promotional campaign, or a public announcement. Graphic designers work
-                            creatively, both in print and electronically.</p>
+                        <p>I was employed with Deloitte for 6+ years, with the internal communications team. I led a
+                            team of UI and UX developers building interactive internal campaigns for employee
+                            engagement. I was instrumental in expanding the service offerings within their CoE,
+                            including multi-media technologies and real-time coverage of events within the organization.
+                        </p>
+                        <p>From there until July 2022, I was with the Pharmaceuticals giant Novartis, as a manager
+                            leading all the multimedia creatives for different leadership groups. Augmenting the reach
+                            of the leadership vision and employee engagement programs to the larger audiences.</p>
+                        <p>While my daily job included video production and post-production, multi-media design, and
+                            people management, I am also an ardent photographer and have passionately led firm-wide
+                            positions as the lead photographer on several events. A lot of my work has been captured and
+                            displayed in physical office spaces, as well as been part of key creatives with external
+                            coverage as well.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="experiece-tools-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Experience</h3>
+                        <ul class="experience-timeline">
+                            <li>
+                                <h4>Manager | Novertis</h4>
+                                <span>Jan 2020 - Jul 2022</span>
+                                <a href="#">View details</a>
+                            </li>
+                            <li>
+                                <h4>Assistant Manager | Deloitte</h4>
+                                <span>Jun 2016 - Jan 2020</span>
+                                <a href="#">View details</a>
+                            </li>
+                            <li>
+                                <h4>Media Producer | CMC</h4>
+                                <span>Dec 2011 - Feb 2013</span>
+                                <a href="#">View details</a>
+                            </li>
+                            <li>
+                                <h4>Rating Analyst | M-Cril</h4>
+                                <span>Dec 2011 - Feb 2013</span>
+                                <a href="#">View details</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Skills</h3>
+                        <ul class="skills">
+                            <li><img src="./design-assets/photoshop@2x.png" alt="">
+                                <span>90%</span>
+                                <p>Photoshop</p>
+                            </li>
+                            <li><img src="./design-assets/premiere-pro@2x.png" alt="">
+                                <span>90%</span>
+                                <p>Premiere pro</p>
+                            </li>
+                            <li><img src="./design-assets/illustrator@2x.png" alt="">
+                                <span>90%</span>
+                                <p>Illustrator</p>
+                            </li>
+                            <li><img src="./design-assets/Indesign@2x.png" alt="">
+                                <span>90%</span>
+                                <p>Indesign</p>
+                            </li>
+                            <li><img src="./design-assets/after-effects@2x.png" alt="">
+                                <span>90%</span>
+                                <p>After Effects</p>
+                            </li>
+                        </ul>
+                        <ul class="skills">
+                            <li><img src="./design-assets/sharePoint@2x.png" alt="">
+                                <span>90%</span>
+                                <p>SharePoint</p>
+                            </li>
+                            <li><img src="./design-assets/htm@2x.png" alt="">
+                                <span>90%</span>
+                                <p>HTML</p>
+                            </li>
+                            <li><img src="./design-assets/css@2x.png" alt="">
+                                <span>90%</span>
+                                <p>CSS</p>
+                            </li>
+                          
+                        </ul>
+
+                        <ul class="skills">
+                            <li><img src="./design-assets/audio@2x.png" alt="">
+                                <span>90%</span>
+                                <p>Audio <br> Production</p>
+                            </li>
+                            <li><img src="./design-assets/research@2x.png" alt="">
+                                <span>90%</span>
+                                <p>Research and <br> Content Strategy</p>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -313,7 +565,7 @@
         <div class="work-section">
             <div class="container">
                 <div class="work-sec-header">
-                    <img src="./Images/bg-pattern-1.png" alt="">
+                    <img src="./design-assets/bg-pattern-3@2x.png" alt="">
                     <h3>I work on</h3>
                 </div>
                 <div class="diff-works-sec">
@@ -363,19 +615,19 @@
     <script>
 
         $(document).ready(function () {
-            setTimeout(function () {
-                $('.profile-img').addClass('fram-animation')
-                $('.img-wrap').addClass('pic-animation')
-            }, 500)
+            // setTimeout(function () {
+            //     $('.profile-img').addClass('fram-animation')
+            //     $('.img-wrap').addClass('pic-animation')
+            // }, 500)
 
-            $(".about-me-btn").click(function () {
-                $('html,body').animate({
-                    scrollTop: $(".about-profile-section").offset().top
-                }, 500);
-                setTimeout(function () {
-                    $('.work-sec-header h3, .about-me-header h3').addClass('expand')
-                }, 500)
-            });
+            // $(".about-me-btn").click(function () {
+            //     $('html,body').animate({
+            //         scrollTop: $(".about-profile-section").offset().top
+            //     }, 500);
+            //     setTimeout(function () {
+            //         $('.work-sec-header h3, .about-me-header h3').addClass('expand')
+            //     }, 500)
+            // });
 
             $(function () {
                 var header = $('.work-sec-header h3');
