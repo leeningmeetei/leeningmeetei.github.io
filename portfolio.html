@@ -315,6 +315,7 @@
             color: #75A2BB;
             text-decoration: none;
             padding-top: 20px;
+            cursor: pointer;
         }
 
         .experiece-tools-section h3,
@@ -358,7 +359,7 @@
             top: 0;
             width: 25px;
             height: 25px;
-            background: #ffffff;
+            background: #f0f4fe;
             border-radius: 50%;
             border: #00355280 2px solid;
         }
@@ -602,12 +603,12 @@
     <div class="portfolio-wrapper">
         <div class="container">
             <ul class="page-nav">
-                <li><a href="" class="inner-navigation"></a><img src="./design-assets/motif-orange@2x.png" alt=""></li>
-                <li><a href="" class="inner-navigation">Contact</a></li>
-                <li><a href="" class="inner-navigation">Work</a></li>
-                <li><a href="" class="inner-navigation">Skill</a></li>
-                <li><a href="" class="inner-navigation">Experience</a></li>
-                <li><a href="" class="inner-navigation">About me</a></li>
+                <li><a class="inner-navigation"></a><img src="./design-assets/motif-orange@2x.png" alt=""></li>
+                <li><a scrollTo="contact-section" class="inner-navigation">Contact</a></li>
+                <li><a scrollTo="work-section" class="inner-navigation">Work</a></li>
+                <li><a scrollTo="experiece-tools-section" class="inner-navigation">Skill</a></li>
+                <li><a scrollTo="experiece-tools-section" class="inner-navigation">Experience</a></li>
+                <li><a scrollTo="about-profile-section" class="inner-navigation">About me</a></li>
             </ul>
         </div>
         <div class="profile-details-wrap">
@@ -736,7 +737,7 @@
                         <ul class="skills">
                             <li><img src="./design-assets/camera@2x.png" alt="">
                                 <span>75%</span>
-                                <p>Videography, <br>Photography</p>
+                                <p>Videography and<br>Photography</p>
                             </li>
                             <li><img src="./design-assets/audio@2x.png" alt="">
                                 <span>75%</span>
@@ -1050,14 +1051,24 @@
             //     $('.img-wrap').addClass('pic-animation')
             // }, 500)
 
-            // $(".about-me-btn").click(function () {
-            //     $('html,body').animate({
-            //         scrollTop: $(".about-profile-section").offset().top
-            //     }, 500);
-            //     setTimeout(function () {
-            //         $('.work-sec-header h3, .about-me-header h3').addClass('expand')
-            //     }, 500)
-            // });
+            $(".about-me-btn").click(function () {
+                $('html,body').animate({
+                    scrollTop: $(".about-profile-section").offset().top
+                }, 500);
+                setTimeout(function () {
+                    $('.work-sec-header h3, .about-me-header h3').addClass('expand')
+                }, 500)
+            });
+
+            $(".inner-navigation").click(function () {
+                var moveToId = $(this).attr('scrollTo') 
+                console.log(moveToId)
+                $('html,body').animate({
+                    scrollTop: $("."+moveToId).offset().top
+                }, 500);
+            });
+
+
 
             $(function () {
                 var header = $('.work-sec-header h3');
