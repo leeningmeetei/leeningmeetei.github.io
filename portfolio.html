@@ -1197,7 +1197,7 @@
                 }, 500);
             });
 
-            $('.accordion-btn').click(function () {
+            $('.accordion-btn').off().on('click', function () {
                 $('.cust-accordion-desc').hide()
                 var itemId = $(this).attr('accordion-id')
                 $("#" +itemId).slideToggle();
