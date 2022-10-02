@@ -316,6 +316,26 @@
             text-decoration: none;
             padding-top: 20px;
             cursor: pointer;
+            position: relative;
+            transition: 0.3s all ease;
+        }
+
+        ul.page-nav li:not(:first-child) a:hover {
+            color: #003552;
+        }
+
+        ul.page-nav li:not(:first-child) a:before {
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #FA9A00;
+            content: '';
+            bottom: -10px;
+            transition: 0.3s all ease;
+        }
+
+        ul.page-nav li:not(:first-child) a:hover:before {
+            width: 50%;
         }
 
         .experiece-tools-section h3,
@@ -1029,7 +1049,9 @@
                         <div class="col-md-4">
                             <div class="linkedIn">
                                 <img src="./design-assets/linkedIn@2x.png" alt="">
-                                <span><a target="_blank" href="https://www.linkedin.com/in/leening-meetei-221b6933/">Leening Meetei</a></span>
+                                <span><a target="_blank"
+                                        href="https://www.linkedin.com/in/leening-meetei-221b6933/">Leening
+                                        Meetei</a></span>
                             </div>
                         </div>
                     </div>
@@ -1055,10 +1077,10 @@
             });
 
             $(".inner-navigation").click(function () {
-                var moveToId = $(this).attr('scrollTo') 
+                var moveToId = $(this).attr('scrollTo')
                 console.log(moveToId)
                 $('html,body').animate({
-                    scrollTop: $("."+moveToId).offset().top
+                    scrollTop: $("." + moveToId).offset().top
                 }, 500);
             });
 
