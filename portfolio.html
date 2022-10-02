@@ -407,7 +407,8 @@
             display: block;
             margin-top: 15px;
             position: relative;
-            ;
+            cursor: pointer;
+            text-decoration: none;
         }
 
         ul.experience-timeline a:after {
@@ -616,6 +617,33 @@
             margin: 0 5px 10px 0;
             border: 2px solid #ccc;
         }
+
+        .cust-accordion-desc {
+            margin-top: 10px;
+            padding-right: 20px;
+            display: none;
+        }
+
+        .cust-accordion-desc h5 {
+            margin-top: 15px;
+        }
+
+        .cust-accordion-desc ul {
+            padding-left: 30px;
+            list-style: disc;
+            list-style-type: revert;
+        }
+
+        .cust-accordion-desc ul li {
+            padding-left: 0;
+            margin-bottom: 5px;
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        .cust-accordion-desc ul li:before {
+            display: none;
+        }
     </style>
 </head>
 
@@ -695,22 +723,107 @@
                             <li>
                                 <h4>Manager | Novertis</h4>
                                 <span>Jan 2020 - Jul 2022</span>
-                                <a href="#">View details</a>
+
+                                <div id="1" class="cust-accordion-desc">
+                                    <h5>Strategic Communications</h5>
+                                    <ul>
+                                        <li>Develop a deep understanding of the target audience and their needs and
+                                            develop a robust strategy to make communication campaigns successful</li>
+                                        <li>Generate ideas in line with the Novartis brand experience, and drive the
+                                            execution of the strategy to bring ideas to life</li>
+                                        <li>Combine innovative communications strategy and digital technology including
+                                            new interactive communication capabilities and channels as well as
+                                            gamification techniques to increase engages with its associates</li>
+                                    </ul>
+                                    <h5>Design and Digital</h5>
+                                    <ul>
+                                        <li>End to end video production for leadership video/audio podcast series to
+                                            engage with associates</li>
+                                        <li>Develop newsletters design for various series to have the right style,
+                                            attractive graphics, images, and other visual elements according to the
+                                            objectives of the company</li>
+                                        <li>Design web page graphics, logos, illustrations, brochures and other forms of
+                                            visual communication in line with Novartis policies and standards</li>
+                                        <li>Capture, edit, and produce photos and videos for internal and external
+                                            purposes</li>
+                                        <li>Develop excellent presentation decks while ensuring alignment with our
+                                            visual identity</li>
+                                        <li>Proactively plan creative, compelling, and targeted digital communications
+                                            materials</li>
+                                        <li>Understand and translate complex processes, data, and concepts into
+                                            meaningful visual content</li>
+                                        <li>Provide support to the Global communications team on global projects as well
+                                            as special projects</li>
+                                    </ul>
+                                </div>
+                                <a class="accordion-btn" accordion-id="1">View details</a>
                             </li>
                             <li>
                                 <h4>Assistant Manager | Deloitte</h4>
                                 <span>Jun 2016 - Jan 2020</span>
-                                <a href="#">View details</a>
+                                <div id="2" class="cust-accordion-desc">
+                                    <h5>Video</h5>
+                                    <ul>
+                                        <li>Set up and now lead a video production service offering within the USI
+                                            internal communications team, primarily enabled by Adobe Creative Cloud</li>
+                                        <li>Translate business requirements to campaign creatives across media formats
+                                        </li>
+                                        <li>Solution design and lead technical projects, that involves multi stakeholder
+                                            management</li>
+                                        <li>Lead video productions to cover leadership messages and live internal events
+                                        </li>
+                                    </ul>
+                                    <h5>Image and Design</h5>
+                                    <ul>
+                                        <li>Build digital creatives that cover organizational culture and important
+                                            initiatives across the firm</li>
+                                        <li>Work closely with stakeholders from within Talent and compliance to build
+                                            products for different campaigns</li>
+                                        <li>Prepare wireframe and mock-ups using Adobe Creative Cloud, for new platform
+                                            development</li>
+                                        <li>Web publishing in SharePoint 2010 platfor</li>
+                                        <li>Implementing jQuery on the page to enable live animation</li>
+                                    </ul>
+
+                                </div>
+                                <a class="accordion-btn" accordion-id="2">View details</a>
                             </li>
                             <li>
                                 <h4>Media Producer | CMC</h4>
                                 <span>Dec 2011 - Feb 2013</span>
-                                <a href="#">View details</a>
+                                <div id="3" class="cust-accordion-desc">
+                                    <ul>
+                                        <li>Developed an Interactive Learning module on VMU (Vehicle Mounted Unit) for
+                                            the Botswana Transport Authorit</li>
+                                        <li>Made a promotional film on CHOICE (Chhattisgarh Online Information for
+                                            Citizen Empowerment) to provide awareness about e-governance</li>
+                                        <li>Developed a brochure for CHOICE report out</li>
+                                        <li>Contributed courseware e-learning video scripts for Adani CBT (Computer
+                                            Based Training)</li>
+                                    </ul>
+                                </div>
+                                <a class="accordion-btn" accordion-id="3">View details</a>
                             </li>
                             <li>
                                 <h4>Rating Analyst | M-Cril</h4>
                                 <span>Dec 2011 - Feb 2013</span>
-                                <a href="#">View details</a>
+                                <div id="4" class="cust-accordion-desc">
+                                    <ul>
+                                        <li>Led and coordinated the team during the visit to schools </li>
+                                        <li>Conducted various Quality Assessment tests for students and teachers</li>
+                                        <li>Facilitated training programs and workshop on effective teaching and
+                                            practice for
+                                            teachers and management </li>
+                                        <li>Conducted Group Discussion with the Management and Teachers and Parents
+                                            separately in a
+                                            confidential manner </li>
+                                        <li>Assessed 40 affordable schools across Hyderabad</li>
+                                        <li>Advisory team to provide guidelines on effective teaching and learning to
+                                            teachers and
+                                            management</li>
+                                    </ul>
+                                </div>
+                                <a class="accordion-btn" accordion-id="4">View details</a>
                             </li>
                         </ul>
                     </div>
@@ -1084,6 +1197,11 @@
                 }, 500);
             });
 
+            $('.accordion-btn').click(function () {
+                $('.cust-accordion-desc').hide()
+                var itemId = $(this).attr('accordion-id')
+                $("#" +itemId).slideToggle();
+            })
 
 
             $(function () {
