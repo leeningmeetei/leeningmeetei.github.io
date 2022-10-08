@@ -193,7 +193,7 @@
 
         .about-me p {
             line-height: 1.5;
-            font-size: 1.1em;
+            font-size: 1.3em;
             /* color: #ccc; */
             margin-bottom: 1em;
             font-weight: 400;
@@ -244,7 +244,7 @@
             padding: 10px;
             padding-left: 0;
             color: #707070;
-            font-size: 1.25em;
+            font-size: 1.75em;
             font-weight: 400;
             position: relative;
         }
@@ -637,8 +637,9 @@
         .cust-accordion-desc ul li {
             padding-left: 0;
             margin-bottom: 5px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 300;
+            color: #000;
         }
 
         .cust-accordion-desc ul li:before {
@@ -873,7 +874,7 @@
                                 <p>Videography and<br>Photography</p>
                             </li>
                             <li><img src="./design-assets/audio@2x.png" alt="">
-                                <span>75%</span>
+                                <span>90%</span>
                                 <p>Audio <br> Production</p>
                             </li>
                             <li><img src="./design-assets/research@2x.png" alt="">
@@ -899,7 +900,7 @@
                                 data-toggle="tab">Photography</a></li>
                         <li role="presentation"><a href="#graphicdesign" role="tab" data-toggle="tab">Graphic design</a>
                         </li>
-                        <li role="presentation"><a href="#videocreation" role="tab" data-toggle="tab">Video creation</a>
+                        <li role="presentation"><a href="#videocreation" role="tab" data-toggle="tab">Video</a>
                         </li>
                         <li role="presentation"><a href="#webdesign" role="tab" data-toggle="tab">Web design</a></li>
                     </ul>
@@ -1200,7 +1201,7 @@
             $('.accordion-btn').off().on('click', function () {
                 $('.cust-accordion-desc').hide()
                 var itemId = $(this).attr('accordion-id')
-                $("#" +itemId).slideToggle();
+                $("#" + itemId).slideToggle();
             })
 
 
